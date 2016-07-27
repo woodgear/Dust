@@ -76,7 +76,6 @@ public class Lexer {
         String line;
         try {
             line = reader.readLine();
-            Log.d("line=>"+line);
         } catch (IOException e) {
             throw new ParseException(e);
         }
@@ -107,7 +106,6 @@ public class Lexer {
 
     private void addToken(int lineNo, Matcher matcher) {
         String m=matcher.group(1);
-        Log.d("group========>"+m);
         if (m!=null)//整个匹配有命中
         {
             if (matcher.group(2)==null)//不是注释

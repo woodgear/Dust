@@ -17,6 +17,6 @@ public class StrToken extends Token {
 
     @Override
     public String getText() {
-        return "str:"+str;
+        return str;
     }
 }

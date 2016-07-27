@@ -17,7 +17,7 @@ public class NumToken extends Token {
 
     @Override
     public String getText() {
-        return "num:"+value;
+        return value+"";
     }
     public int getValue(){return value;}
 }

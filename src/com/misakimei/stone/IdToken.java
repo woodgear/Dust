@@ -17,6 +17,6 @@ public class IdToken extends Token {
 
     @Override
     public String getText() {
-        return "id:"+text;
+        return text;
     }
 }
