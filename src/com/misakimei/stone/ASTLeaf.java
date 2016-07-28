@@ -33,6 +33,11 @@ public class ASTLeaf extends ASTree {
         return "第"+token.getLineNumber()+"行";
     }
 
+    @Override
+    public Object eval(Environment env) {
+        throw  new StoneExcetion("无法执行 eval "+toString(),this);
+    }
+
     public Token token(){return token;}
 
     @Override

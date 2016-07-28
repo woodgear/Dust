@@ -8,4 +8,9 @@ public class NumberLiteral extends ASTLeaf {
         super(t);
     }
     public int value(){return ((NumToken)token()).getValue();}
+
+    @Override
+    public Object eval(Environment env) {
+        return value();
+    }
 }

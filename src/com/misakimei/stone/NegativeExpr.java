@@ -9,7 +9,23 @@ public class NegativeExpr extends ASTList {
     public NegativeExpr(List<ASTree> lis) {
         super(lis);
     }
-    public static ASTree create(List<ASTree> c){
-        return c.size()==1?c.get(0):new PrimaryExpr(c);
+    public  ASTree operand(){
+        return child(0);
+    }
+
+    @Override
+    public String toString() {
+        return "-"+operand();
+    }
+
+    @Override
+    public Object eval(Environment env) {
+        Object v=operand().eval(env);
+        if (v instanceof Integer){
+            return new Integer(-((Integer) v).intValue());
+        }
+        else
+            throw new StoneExcetion("无法对此类型使用-号",this);
+
     }
 }

@@ -50,4 +50,8 @@ public class ASTList extends ASTree {
         }
         return null;
     }
+    @Override
+    public Object eval(Environment env) {
+        throw  new StoneExcetion("无法执行 eval "+toString(),this);
+    }
 }
