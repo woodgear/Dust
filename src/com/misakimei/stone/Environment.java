@@ -8,4 +8,7 @@ import java.util.Objects;
 public interface Environment {
     void put(String name,Object value);
     Object get(String name);
+    void putNew(String name,Object value);//因为在嵌套作用域下有可能重名 所以有一个putNew
+    Environment where(String name);//作用域链来检测name在哪里
+    void setOuter(Environment env);//设置外部作用域
 }

@@ -85,6 +85,16 @@ public class BinaryExpr extends ASTList {
 
     private Object computeAssign(Environment env, Object rvalue) {
         ASTree left = left();
+        if ( left instanceof PrimaryExpr){
+            Log.d("left prim "+        left.numChildren());
+            Object chi=((PrimaryExpr) left).operand();
+            if (chi instanceof Name){
+                Log.d("yes name  "+((Name) chi).name());
+            }
+
+        }
+
+
         if (left instanceof Name) {
             env.put(((Name) left).name(), rvalue);
             return rvalue;

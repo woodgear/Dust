@@ -10,4 +10,5 @@ public class StoneExcetion extends RuntimeException {
     public StoneExcetion(String msg,ASTree t){
         super(msg+" "+t.location());
     }
+
 }
