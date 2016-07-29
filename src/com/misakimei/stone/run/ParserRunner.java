@@ -1,4 +1,4 @@
-package com.misakimei.stone.Interpreter;
+package com.misakimei.stone.run;
 
 import com.misakimei.stone.*;
 
