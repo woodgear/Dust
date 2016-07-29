@@ -5,15 +5,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/Lexer.java" line="61" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0598930c-3352-4576-923d-6a4f7877b016" name="Default" comment="Bug修复 &#10;缘由是PrimarExpr之前定义的ceate函数被我删了&#10;都是Parse的锅 T_T">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/closure.stone" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/ClosureParse.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/Fun.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/run/ClosureInterpretre.java" />
+    <list default="true" id="0598930c-3352-4576-923d-6a4f7877b016" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Interpreter/BasicInterpreter.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/run/BasicInterpreter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Interpreter/FuncInterpreter.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/run/FuncInterpreter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Interpreter/ParserRunner.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/run/ParserRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/closure.stone" afterPath="$PROJECT_DIR$/data/closure.stone" />
     </list>
     <ignored path="Stone.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,16 +29,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ASTList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ASTList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BasicInterpreter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/BasicInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -102,16 +86,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClosureInterpretre.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClosureInterpretre.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/ClosureInterpretre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+            <state relative-caret-position="273">
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#255#256#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="closure.stone" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data/closure.stone">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -160,6 +164,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="woodgear" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Dust" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -222,8 +231,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="58" />
+    <option name="y" value="40" />
     <option name="width" value="1378" />
     <option name="height" value="780" />
   </component>
@@ -286,46 +295,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="run" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -623,11 +592,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469780937088</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="第7天增加函数功能完成">
+      <created>1469781586248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1469781586248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
+    <frame x="58" y="40" width="1378" height="780" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -636,7 +612,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32838038" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32937685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2716418" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -671,20 +647,14 @@
     <MESSAGE value="第6天 哈哈 有了一个样子&#10;" />
     <MESSAGE value="出现BUG&#10;sum=0 &#10;sum被识别成PrimaryExpr 而不是name&#10;这个PrimaryExpr只有一个child 就是name&#10;" />
     <MESSAGE value="Bug修复 &#10;缘由是PrimarExpr之前定义的ceate函数被我删了&#10;都是Parse的锅 T_T" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug修复 &#10;缘由是PrimarExpr之前定义的ceate函数被我删了&#10;都是Parse的锅 T_T" />
+    <MESSAGE value="第7天增加函数功能完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="第7天增加函数功能完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Token.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Lexer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1175,23 +1145,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/closure.stone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/ClosureInterpretre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+        <state relative-caret-position="273">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#255#256#0" expanded="true" />
             <element signature="e#331#332#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/closure.stone">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>

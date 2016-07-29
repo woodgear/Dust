@@ -1,4 +1,14 @@
-a=fun(x){
-x+1
-}
-a(10)
+def counter(){
+    count = 0
+    fun (){
+        count =count+1
+        }
+       }
+
+c1= counter()
+c2= counter()
+
+c1()
+c1()
+c1()
+c2()
