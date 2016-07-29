@@ -1,16 +1,18 @@
 package com.misakimei.stone;
 
+import java.sql.PseudoColumnUsage;
 import java.util.List;
 
 /**
  * Created by 18754 on 2016/7/29.
  */
-public class Arguments extends ASTList{
+public class Arguments extends Postfix{
+
 
     public Arguments(List<ASTree> lis) {
         super(lis);
     }
-    public int size(){return size();}
+    public int size(){return numChildren();}
 
     public Object eval(Environment env,Object val) {
         if (!(val instanceof Function))
