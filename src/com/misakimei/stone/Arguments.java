@@ -1,6 +1,5 @@
 package com.misakimei.stone;
 
-import java.sql.PseudoColumnUsage;
 import java.util.List;
 
 /**
@@ -25,12 +24,20 @@ public class Arguments extends Postfix{
         if (size()!=params.size()){
             throw new StoneExcetion("参数不够 ",this);
         }
+
+
+
+
         Environment nenv=fun.makeEnv();
         int num=0;
         for (ASTree a:this){
-            params.eval(nenv,num++,a.eval(env));
+            params.eval(nenv,num++,a.eval(env));//将参数的值填入方法的内部环境
         }
         return fun.getBody().eval(nenv);
+
+        //闭包原理就在于此 每次执行时重新执行函数内部 创建新的环境
+
+
 
     }
 }

@@ -22,9 +22,10 @@ public class DefStmnt extends ASTList {
 
     @Override
     public Object eval(Environment env) {
-        //先获取参数生成函数内部作用域 在给body设置作用域并执行
+
+       //生成一个函数对象 被把他赋值给name()  参数 block 环境
        env.putNew(name(),new Function(paramters(),body(),env));
-        return name();
+       return name();
     }
 
     @Override

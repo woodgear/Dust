@@ -17,6 +17,7 @@ public class PrimaryExpr extends ASTList {
 
     }
 
+    //返回名字的部分 sum(1) 返回sum 之前def已经把 sum声明成一个对象了
     public ASTree operand(){
         return child(0);
     }
@@ -24,6 +25,7 @@ public class PrimaryExpr extends ASTList {
         return (Postfix)child(numChildren()-nest-1);
     }
 
+    //后缀 例如 sum(1) 的 (1)
     public boolean hasPostfix(int nest){
         return numChildren()-nest>1;
     }
@@ -35,9 +37,10 @@ public class PrimaryExpr extends ASTList {
 
     private Object evalSubExpr(Environment env, int nest) {
         if (hasPostfix(nest)){
-            Object target=evalSubExpr(env,nest+1);
-            return postfix(nest).eval(env,target);
+            Object target=evalSubExpr(env,nest+1);//递归返回的是一个函数对象
+            return postfix(nest).eval(env,target);//Arguments的eval
         }else {
+            //最里层的是一个Name
             return operand().eval(env);
         }
     }

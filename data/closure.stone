@@ -5,10 +5,10 @@ def counter(){
         }
        }
 
-c1= counter()
-c2= counter()
-
-c1()
+c1=counter()
+c2=counter()
 c1()
 c1()
 c2()
+
+//闭包原理见Arguments.java 和./data/闭包.sai
