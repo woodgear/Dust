@@ -14,6 +14,23 @@ public class Arguments extends Postfix{
     public int size(){return numChildren();}
 
     public Object eval(Environment env,Object val) {
+
+
+        if (val instanceof NativeFunction){
+            NativeFunction fun= (NativeFunction) val;
+            int numparam=fun.numParams();
+            if (size()!=numparam){
+                throw new StoneExcetion("函数参数不够 ",this);
+            }
+
+            Object[]arg=new Object[numparam];
+            int num=0;
+            for (ASTree a:this){
+                arg[num++]=a.eval(env);
+            }
+            return fun.invoke(arg,this);
+        }
+
         if (!(val instanceof Function))
         {
             throw new StoneExcetion("不是函数 ",this);
@@ -24,10 +41,6 @@ public class Arguments extends Postfix{
         if (size()!=params.size()){
             throw new StoneExcetion("参数不够 ",this);
         }
-
-
-
-
         Environment nenv=fun.makeEnv();
         int num=0;
         for (ASTree a:this){
@@ -36,8 +49,5 @@ public class Arguments extends Postfix{
         return fun.getBody().eval(nenv);
 
         //闭包原理就在于此 每次执行时重新执行函数内部 创建新的环境
-
-
-
     }
 }

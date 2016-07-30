@@ -5,4 +5,6 @@ def fib(n){
     fib(n-1)+fib(n-2)
     }
 }
-fib(10)
+t=currentTime()
+fib 30
+print currentTime()-t+"msec"
