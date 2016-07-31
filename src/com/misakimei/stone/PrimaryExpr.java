@@ -35,11 +35,13 @@ public class PrimaryExpr extends ASTList {
         return evalSubExpr(env,0);
     }
 
-    private Object evalSubExpr(Environment env, int nest) {
+    public Object evalSubExpr(Environment env, int nest) {
         if (hasPostfix(nest)){
             Object target=evalSubExpr(env,nest+1);//递归返回的是一个函数对象
+
             return postfix(nest).eval(env,target);//Arguments的eval
         }else {
+
             //最里层的是一个Name
             return operand().eval(env);
         }

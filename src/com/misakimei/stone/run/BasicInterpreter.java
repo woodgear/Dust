@@ -12,27 +12,25 @@ import java.io.FileReader;
  * 基本解释器运行测试
  */
 public class BasicInterpreter {
-    private static String file="./data/interpreter.stone";
+    private static String file = "./data/interpreter.stone";
+
     public static void main(String[] args) {
-        run(new BasicParser(),new BasicEnv(),file);
+        run(new BasicParser(), new BasicEnv(), file);
     }
 
     public static void run(BasicParser basicParser, Environment basicEnv, String path) {
         try {
-            Lexer lex=new Lexer(new FileReader(new File(path)));
-            while (lex.peek(0)!= Token.EOF){
-                ASTree ast=basicParser.parse(lex);
-
-
-                if (!(ast instanceof NULLStmnt)){
-                    Object r=ast.eval(basicEnv);
-                    Log.d("==>"+r.toString());
+            Lexer lex = new Lexer(new FileReader(new File(path)));
+            while (lex.peek(0) != Token.EOF) {
+                ASTree ast = basicParser.parse(lex);
+                if (!(ast instanceof NULLStmnt)) {
+                    Object o = ast.eval(basicEnv);
+                    //Log.d("debug==> "+o.toString());
                 }
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
     }
 
 }

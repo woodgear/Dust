@@ -30,6 +30,7 @@ public class BinaryExpr extends ASTList {
         if (op.equals("=")) {
             //=
             Object right = right().eval(env);
+
             return computeAssign(env, right);
         } else {
             Object left = left().eval(env);
@@ -85,11 +86,32 @@ public class BinaryExpr extends ASTList {
 
     private Object computeAssign(Environment env, Object rvalue) {
         ASTree left = left();
+        //如果左式是 PrimaryExpr 类似 a.b=2  左式 a.b
+        if (left instanceof PrimaryExpr){
+            PrimaryExpr p= (PrimaryExpr) left;
+            if (p.hasPostfix(0)&&p.postfix(0) instanceof Dot){
+                Object t= p.evalSubExpr(env,1);
+                if (t instanceof StoneObject){
+                    return setField((StoneObject)t,(Dot)p.postfix(0),rvalue);
+                }
+            }
+        }
 
         if (left instanceof Name) {
             env.put(((Name) left).name(), rvalue);
+
             return rvalue;
         }
         throw new StoneExcetion("无法在此处应用 = ", this);
+    }
+
+    private Object setField(StoneObject so, Dot dot, Object rvalue) {
+        String name=dot.name();
+        try {
+            so.write(name,rvalue);
+        } catch (StoneObject.AccessException e) {
+            throw new StoneExcetion("访问异常 无法写入 "+name+" "+rvalue);
+        }
+        return rvalue;
     }
 }
