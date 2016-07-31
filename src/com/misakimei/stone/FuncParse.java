@@ -27,10 +27,15 @@ public class FuncParse extends BasicParser {
     Parser postfix=rule().sep("(").maybe(args).sep(")");
 
 
+    Parser elements=rule(ArrayLiteral.class).ast(expr).repeat(rule().sep(",").ast(expr));
     public FuncParse(){
         reserved.add(")");
         primary.repeat(postfix);
         simple.option(args);
         program.insertChoice(def);
+
+        reserved.add("]");
+        primary.insertChoice(rule().sep("[").maybe(elements).sep("]"));
+        postfix.insertChoice(rule(ArrayRef.class).sep("[").ast(expr).sep("]"));
     }
 }
