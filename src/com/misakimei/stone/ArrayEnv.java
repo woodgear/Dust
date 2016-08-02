@@ -7,6 +7,7 @@ import jdk.nashorn.internal.ir.Symbol;
  * 数组环境与hash环境之间的区别是
  * hash环境通过 hashmap.get(String name) O(1)
  * 数组环境用   Object[]values values[name.index] 无须查询
+ *
  */
 public class ArrayEnv implements Environment {
     protected Environment outer;
