@@ -22,6 +22,21 @@ public class NestEnv implements Environment {
         this.outer=out;
     }
 
+    @Override
+    public Symbols symbol() {
+        return null;
+    }
+
+    @Override
+    public void put(int nest, int index, Object val) {
+
+    }
+
+    @Override
+    public Object get(int nest, int index) {
+        return null;
+    }
+
     public NestEnv() {
         this(null);
     }

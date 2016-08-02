@@ -47,4 +47,9 @@ public class PrimaryExpr extends ASTList {
         }
     }
 
+    @Override
+    public void lookup(Symbols symbol) {
+        super.lookup(symbol);
+        Log.d(toString());
+    }
 }

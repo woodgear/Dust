@@ -40,4 +40,19 @@ public class BasicEnv implements Environment {
     public void setOuter(Environment env) {
         throw new StoneExcetion("无法为最外层作用域设置外层作用域");
     }
+
+    @Override
+    public Symbols symbol() {
+        return null;
+    }
+
+    @Override
+    public void put(int nest, int index, Object val) {
+
+    }
+
+    @Override
+    public Object get(int nest, int index) {
+        return null;
+    }
 }

@@ -5,4 +5,7 @@ def fib(n){
     fib(n-1)+fib(n-2)
     }
 }
-fib(10)
+s=currentTime()
+print fib(33)
+e=currentTime()
+print (e-s+"毫秒")

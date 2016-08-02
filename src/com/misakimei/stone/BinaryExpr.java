@@ -108,7 +108,7 @@ public class BinaryExpr extends ASTList {
                 }
             }
         }else if (left instanceof Name) {
-            env.put(((Name) left).name(), rvalue);
+            ((Name) left).evalForAssign(env,rvalue);
             return rvalue;
         }
         throw new StoneExcetion("无法在此处应用 = ", this);
@@ -122,5 +122,20 @@ public class BinaryExpr extends ASTList {
             throw new StoneExcetion("访问异常 无法写入 " + name + " " + rvalue);
         }
         return rvalue;
+    }
+
+
+    @Override
+    public void lookup(Symbols symbol) {
+        ASTree left=left();
+        if ("=".equals(operator())){
+            if (left instanceof Name){
+                ((Name) left).lookupForAssign(symbol);
+                right().lookup(symbol);
+                return;
+            }
+        }
+        left.lookup(symbol);
+        right().lookup(symbol);
     }
 }

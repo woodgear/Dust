@@ -54,4 +54,11 @@ public class ASTList extends ASTree {
     public Object eval(Environment env) {
         throw  new StoneExcetion("无法执行 eval "+toString(),this);
     }
+
+    @Override
+    public void lookup(Symbols symbol) {
+        for (ASTree t:this){
+            t.lookup(symbol);
+        }
+    }
 }

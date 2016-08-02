@@ -1,0 +1,7 @@
+n=10
+def t(){
+n=n+1
+}
+
+t()
+print n
