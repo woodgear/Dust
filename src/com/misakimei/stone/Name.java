@@ -36,14 +36,26 @@ public class Name extends ASTLeaf {
     public Object eval(Environment env) {
         if (index==UNKNOWN){
             return env.get(name());
+        }else if (nest==MemberSymbols.FIELD){
+            return getThis(env).read(index);
+        }else if (nest==MemberSymbols.METHOD){
+            return getThis(env).method(index);
         }else {
             return env.get(nest,index);
         }
     }
 
+    private OptStoneObject getThis(Environment env) {
+       return (OptStoneObject) env.get(0,0);
+    }
+
     public void  evalForAssign(Environment env,Object val){
         if (index==UNKNOWN){
             env.put(name(),val);
+        }else if (nest==MemberSymbols.FIELD){
+            getThis(env).write(index,val);
+        }else if (nest==MemberSymbols.METHOD){
+            throw new StoneExcetion("无法更新方法 "+name(),this);
         }else {
             env.put(nest,index,val);
         }

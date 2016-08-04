@@ -10,7 +10,6 @@ public class ResizableArrayEnv extends ArrayEnv {
     public ResizableArrayEnv() {
         super(10, null);
         names=new Symbols();
-
     }
 
     @Override
@@ -36,7 +35,7 @@ public class ResizableArrayEnv extends ArrayEnv {
     public void put(String name, Object value) {
         Environment e=where(name);
         if (e==null){
-            e=this;
+            e=this;//如果在找不到外部 自身有此变量的定义 那么将他放入自身中
         }
         e.putNew(name,value);
     }

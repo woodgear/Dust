@@ -5,16 +5,14 @@ package com.misakimei.stone;
  */
 public class Function {
 
-    protected int size;
     protected ParamterList paramters;
     protected BlockStment body;
     protected Environment env;
 
-    public Function(ParamterList paramters, BlockStment body, Environment env, int size) {
+    public Function(ParamterList paramters, BlockStment body, Environment env) {
         this.paramters = paramters;
         this.body = body;
         this.env = env;
-        this.size=size;
     }
 
     public ParamterList getParamters() {
@@ -26,7 +24,7 @@ public class Function {
     }
 
     public Environment makeEnv(){
-        return new ArrayEnv(size,env);
+        return new NestEnv(env);
     }
 
     @Override

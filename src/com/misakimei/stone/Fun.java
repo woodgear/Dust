@@ -41,6 +41,6 @@ public class  Fun extends ASTList {
 
     @Override
     public Object eval(Environment env) {
-        return new Function(paramters(),body(),env, size);
+        return new OptFunction(paramters(),body(),env, size);//这时就能看出使用修改器的好处了
     }
 }

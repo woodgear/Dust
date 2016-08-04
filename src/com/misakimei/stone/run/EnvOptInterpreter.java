@@ -14,7 +14,7 @@ public class EnvOptInterpreter {
         run(new ClosureParse(),new Native().environment(new ResizableArrayEnv()),"./data/testfun.stone");
     }
 
-    private static void run(BasicParser parser, Environment env,String file) throws FileNotFoundException {
+    protected static void run(BasicParser parser, Environment env,String file) throws FileNotFoundException {
         Lexer lexer=new Lexer(new FileReader(file));
         while (lexer.peek(0)!= Token.EOF){
             ASTree t=parser.parse(lexer);

@@ -1,5 +1,6 @@
 package com.misakimei.stone;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -35,11 +36,24 @@ public class ClassStmnt extends ASTList {
         return "class "+name()+ " "+parent+" "+body()+" )";
     }
 
-    //def class eval 像环境中加对应得 名值
     @Override
     public Object eval(Environment env) {
-        ClassInfo ci=new ClassInfo(this,env);
+        //一个类可以说是有一些变量和一些方法组成的
+        Symbols methodNames=new MemberSymbols(env.symbol(),MemberSymbols.METHOD);
+        Symbols fieldName=new MemberSymbols(methodNames,MemberSymbols.FIELD);
+        OptClassInfo ci=new OptClassInfo(this,env,methodNames,fieldName);
         env.put(name(),ci);
+
+        ArrayList<DefStmnt>methods=new ArrayList<>();
+        if (ci.supperClass() !=null){
+            ci.supperClass().copyTo(fieldName,methodNames,methods);
+        }
+        Symbols newsyms=new SymbolThis(fieldName);
+        body().lookup(newsyms,methodNames,fieldName,methods);//blockstmnt 将真正填充
+        ci.setMethods(methods);
         return name();
     }
+
+    @Override
+    public void lookup(Symbols symbol) {}
 }

@@ -15,4 +15,6 @@ public abstract class ASTree implements Iterable<ASTree>{
         return children();
     }
     public void lookup(Symbols symbol){}
+
+
 }

@@ -1,0 +1,19 @@
+class Fib{
+    fib0=0
+    fib1=1
+    def fib(n){
+        if n==0{
+            fib0
+        }else{
+            if n==1{
+                this.fib1
+            }else{
+                fib(n-1)+this.fib(n-2)
+            }
+        }
+    }
+}
+t=currentTime()
+f=Fib.new
+print (f.fib(33))
+print currentTime()-t+" 毫秒"

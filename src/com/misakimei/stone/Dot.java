@@ -23,21 +23,21 @@ public class Dot extends Postfix {
     @Override
     public Object eval(Environment env, Object value) {
         String member = name();
-        if (value instanceof ClassInfo) {
+        if (value instanceof OptClassInfo) {
             if ("new".equals(member))//使用new 来构造
             {
-                ClassInfo ci = (ClassInfo) value;
-                NestEnv nestEnv = new NestEnv(ci.enviroment());
-                StoneObject so = new StoneObject(nestEnv);
-                nestEnv.put("this", so);//类的环境中 this 指向代表这个类的StoneObject
-                initObject(ci, nestEnv);
+                OptClassInfo ci = (OptClassInfo) value;
+                ArrayEnv nestEnv = new ArrayEnv(1,ci.enviroment());
+                OptStoneObject so = new OptStoneObject(ci,ci.size());
+                nestEnv.put(0,0, so);//类的环境中 this 指向代表这个类的StoneObject
+                initObject(ci,so, nestEnv);
                 return so;
             }
-        } else if (value instanceof StoneObject)//普通的变量读取 或者类的方法调用
+        } else if (value instanceof OptStoneObject)//普通的变量读取 或者类的方法调用
         {
             try {
-                return ((StoneObject) value).read(member);
-            } catch (StoneObject.AccessException e) {
+                return ((OptStoneObject) value).read(member);
+            } catch (OptStoneObject.AccessException e) {
                 throw new StoneExcetion("访问异常 无法读取 " + member);
             }
         }
@@ -46,12 +46,10 @@ public class Dot extends Postfix {
 
 
     //类的初始化 先初始化父类
-    private void initObject(ClassInfo ci, Environment env) {
+    private void initObject(OptClassInfo ci,OptStoneObject obj, Environment env) {
         if (ci.supperClass() != null) {
-            initObject(ci.supperClass(), env);
+            initObject(ci.supperClass(),obj, env);
         }
         ci.body().eval(env);
-
     }
-
 }

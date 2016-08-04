@@ -38,7 +38,7 @@ public class Symbols {
         return get(key,0);
     }
 
-    private Location get(String key, int nest) {
+    protected Location get(String key, int nest) {
         Integer index=table.get(key);
 
 
@@ -71,7 +71,7 @@ public class Symbols {
         return loc;
     }
 
-    private int add(String key) {
+    protected int add(String key) {
         int i=table.size();
         table.put(key,i);
         return i;

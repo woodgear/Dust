@@ -31,10 +31,14 @@ public class DefStmnt extends ASTList {
         size = Fun.lookup(symbol, paramters(), body());//size是此函数产生的变量
     }
 
+    public int locals(){
+        return  size;
+    }
+
     @Override
     public Object eval(Environment env) {
         //生成一个函数对象 被把他赋值给name()  参数 block 环境
-        env.put(0, index, new Function(paramters(), body(), env, size));
+        env.put(0, index, new OptFunction(paramters(), body(), env, size));
         return name();
     }
 
@@ -42,4 +46,13 @@ public class DefStmnt extends ASTList {
     public String toString() {
         return "(def " + name() + " " + paramters() + " " + body() + ")";
     }
+
+    public void lookupAsMethod(Symbols sym){
+        Symbols newsyms=new Symbols(sym);
+        newsyms.putNew(SymbolThis.name);
+        paramters().lookup(newsyms);
+        body().lookup(newsyms);
+        size=newsyms.size();
+    }
+
 }
