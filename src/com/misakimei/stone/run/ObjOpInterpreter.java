@@ -9,7 +9,7 @@ import java.io.FileReader;
 /**
  * Created by 18754 on 2016/8/4.
  * 优化对象操作性能
- * 大写的尴尬 使用斐波那契测试时反而慢了 之前是3661 现在是 4671
+ * 大写的尴尬 使用斐波那契测试时反而慢了 之前是3661 现在是 4671 增加内联缓存大概是 4300-4560 感觉并没有什么卵用
  */
 public class ObjOpInterpreter{
     public static void main(String[] args) throws FileNotFoundException {

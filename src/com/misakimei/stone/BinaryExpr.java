@@ -7,6 +7,10 @@ import java.util.List;
  */
 public class BinaryExpr extends ASTList {
 
+    protected OptClassInfo classInfo=null;
+    protected int index;
+
+
     public BinaryExpr(List<ASTree> lis) {
         super(lis);
     }
@@ -114,13 +118,18 @@ public class BinaryExpr extends ASTList {
         throw new StoneExcetion("无法在此处应用 = ", this);
     }
 
-    private Object setField(OptStoneObject so, Dot dot, Object rvalue) {
-        String name = dot.name();
-        try {
-            so.write(name, rvalue);
-        } catch (OptStoneObject.AccessException e) {
-            throw new StoneExcetion("访问异常 无法写入 " + name + " " + rvalue);
-        }
+    private Object setField(OptStoneObject obj, Dot dot, Object rvalue) {
+
+       if (obj.classInfo()!=classInfo){
+           String member=dot.name();
+           classInfo=obj.classInfo();
+           Integer i=classInfo.fieldIndex(member);
+           if (i!=null){
+               throw new StoneExcetion("无法访问 "+member,this);
+           }
+           index=i;
+       }
+        obj.write(index,rvalue);
         return rvalue;
     }
 

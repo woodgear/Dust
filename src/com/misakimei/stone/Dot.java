@@ -6,6 +6,12 @@ import java.util.List;
  * Created by 18754 on 2016/7/31.
  */
 public class Dot extends Postfix {
+
+    protected OptClassInfo classInfo=null;
+    protected boolean isField;
+    protected int index;
+
+
     public Dot(List<ASTree> lis) {
         super(lis);
     }
@@ -35,13 +41,38 @@ public class Dot extends Postfix {
             }
         } else if (value instanceof OptStoneObject)//普通的变量读取 或者类的方法调用
         {
-            try {
-                return ((OptStoneObject) value).read(member);
-            } catch (OptStoneObject.AccessException e) {
-                throw new StoneExcetion("访问异常 无法读取 " + member);
+            OptStoneObject target= (OptStoneObject) value;
+            if (target.classInfo()!=classInfo){
+                updateCache(target);
+            }
+            if (isField){
+                return target.read(index);
+            }else {
+                return target.method(index);
             }
         }
         return null;
+    }
+
+    private void updateCache(OptStoneObject target) {
+        String member=name();
+        classInfo=target.classInfo();
+        Integer i=classInfo.fieldIndex(member);
+        if (i!=null){
+            isField=true;
+            index=i;
+            return;
+        }
+
+        i=classInfo.methodIndex(member);
+        if (i!=null){
+            isField=false;
+            index=i;
+            return;
+        }
+
+        throw new StoneExcetion("无法访问 "+member,this);
+
     }
 
 

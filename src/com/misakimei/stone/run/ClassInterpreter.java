@@ -9,7 +9,6 @@ import com.misakimei.stone.NestEnv;
  */
 public class ClassInterpreter extends BasicInterpreter {
     public static void main(String[] args) {
-        run(new ClassParse(), new Native().environment(new NestEnv()),"./data/class.stone");
+        run(new ClassParse(), new Native().environment(new NestEnv()),"./data/classfib.stone");
     }
-
 }
