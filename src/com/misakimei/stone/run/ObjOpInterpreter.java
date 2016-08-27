@@ -24,13 +24,5 @@ public class ObjOpInterpreter{
                 Object r = t.eval(env);
             }
         }
-
-//        while (lexer.peek(0)!= Token.EOF){
-//            ASTree t=parser.parse(lexer);
-//            if (!(t instanceof NULLStmnt)){
-//                t.lookup(env.symbol());
-//                Object r=t.eval(env);
-//            }
-//        }
     }
 }
