@@ -1,6 +1,11 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+
 import java.util.List;
+
+import static com.misakimei.stone.vm.Opcode.NEG;
+import static com.misakimei.stone.vm.Opcode.encodeRegister;
 
 /**
  * Created by 18754 on 2016/7/27.
@@ -26,6 +31,13 @@ public class NegativeExpr extends ASTList {
         }
         else
             throw new StoneExcetion("无法对此类型使用-号",this);
+    }
+
+    @Override
+    public void compiler(Code c) {
+        operand().compiler(c);
+        c.add(NEG);
+        c.add(encodeRegister(c.nextReg-1));
 
     }
 }

@@ -1,6 +1,12 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+import com.misakimei.stone.vm.Opcode;
+import com.sun.org.apache.bcel.internal.generic.GOTO;
+
 import java.util.List;
+
+import static com.misakimei.stone.vm.Opcode.*;
 
 /**
  * Created by 18754 on 2016/7/27.
@@ -42,8 +48,9 @@ public class IfStmnt extends ASTList {
             return 0;
         }
     }
+
     private boolean checkCondition(Environment env) {
-        Object conditon=condition().eval(env);
+        Object conditon = condition().eval(env);
         boolean con;
         if (conditon instanceof Boolean) {
             con = ((Boolean) conditon).booleanValue();
@@ -56,4 +63,28 @@ public class IfStmnt extends ASTList {
         return con;
     }
 
+    @Override
+    public void compiler(Code c) {
+        condition().compiler(c);
+        int pos = c.position();
+        c.add(IFZERO);
+        c.add(encodeRegister(--c.nextReg));
+        c.add(encodeShortOffset(0));
+        int oldreg = c.nextReg;
+        thenBlock().compiler(c);
+        int pos2 = c.position();
+        c.add(Opcode.GOTO);
+        c.add(encodeShortOffset(0));
+        c.set(encodeShortOffset(c.position() - pos), pos + 2);//修改 设置正确的ifzero的跳转值
+        ASTree b = elseBlock();
+        c.nextReg = oldreg;
+        if (b != null) {
+            b.compiler(c);
+        } else {
+            c.add(BCONST);
+            c.add((byte) 0);
+            c.add(encodeRegister(c.nextReg++));
+        }
+        c.set(encodeShortOffset(c.position()-pos2),pos2+1);
+    }
 }

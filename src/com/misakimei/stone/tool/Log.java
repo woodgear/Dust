@@ -1,4 +1,4 @@
-package com.misakimei.stone;
+package com.misakimei.stone.tool;
 
 
 /**
@@ -13,4 +13,11 @@ public class Log {
         System.out.println(msg);
     }
 
+    public static void d(Object o) {
+        if (o==null){
+            d("null");
+        }else {
+            d(o.toString());
+        }
+    }
 }

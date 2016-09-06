@@ -22,6 +22,7 @@ public class NativeFunction{
         return numparam;
     }
 
+    //实际上arguments并没有什么卵用
     public Object invoke(Object[] arg, Arguments arguments) {
         try {
          return    method.invoke(null,arg);

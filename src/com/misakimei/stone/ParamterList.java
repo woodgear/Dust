@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.EnvEx;
+import com.misakimei.stone.vm.StoneVM;
+
 import java.util.List;
 
 /**
@@ -26,6 +29,7 @@ public class ParamterList extends ASTList {
     }
 
     public void eval(Environment env, int index, Object val) {
-        env.put(0,offsets[index],val);
+        StoneVM vm=((EnvEx)env).stoneVM();
+        vm.stack()[offsets[index]]=val;
     }
 }

@@ -1,5 +1,7 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -59,6 +61,13 @@ public class ASTList extends ASTree {
     public void lookup(Symbols symbol) {
         for (ASTree t:this){
             t.lookup(symbol);
+        }
+    }
+
+    @Override
+    public void compiler(Code c) {
+        for (ASTree t:this){
+            t.compiler(c);
         }
     }
 }
