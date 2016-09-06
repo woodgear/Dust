@@ -1,5 +1,7 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+
 import java.util.Iterator;
 
 /**
@@ -15,6 +17,6 @@ public abstract class ASTree implements Iterable<ASTree>{
         return children();
     }
     public void lookup(Symbols symbol){}
-
+    public void compiler(Code c){}
 
 }

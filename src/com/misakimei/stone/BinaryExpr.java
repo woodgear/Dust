@@ -1,6 +1,11 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+import com.misakimei.stone.vm.Opcode;
+
 import java.util.List;
+
+import static com.misakimei.stone.vm.Opcode.*;
 
 /**
  * Created by 18754 on 2016/7/27.
@@ -146,5 +151,49 @@ public class BinaryExpr extends ASTList {
         }
         left.lookup(symbol);
         right().lookup(symbol);
+    }
+
+    @Override
+    public void compiler(Code c)
+    {
+        String op=operator();
+        if (op.equals("=")){
+            ASTree l=left();
+            if (l instanceof Name){
+                right().compiler(c);
+                ((Name) l).compilerAssign(c);
+            }else {
+                throw new StoneExcetion("错误的 =");
+            }
+        }else {
+            left().compiler(c);
+            right().compiler(c);
+            c.add(getOpCode(op));
+            c.add(encodeRegister(c.nextReg-2));
+            c.add(encodeRegister(c.nextReg-1));
+            c.nextReg--;
+        }
+    }
+    private byte getOpCode(String op) {
+
+        switch (op){
+            case "+":
+                return ADD;
+            case "-":
+                return SUB;
+            case "*":
+                return MUL;
+            case "/":
+                return DIV;
+            case "%":
+                return REM;
+            case "==":
+                return EQUAL;
+            case ">":
+                return MORE;
+            case "<":
+                return LESS;
+            default:throw new StoneExcetion("操作符错误 ",this);
+        }
     }
 }

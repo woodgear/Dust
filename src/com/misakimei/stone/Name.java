@@ -1,63 +1,96 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.vm.Code;
+
+import static com.misakimei.stone.vm.Opcode.*;
+
 /**
  * Created by 18754 on 2016/7/27.
  */
 public class Name extends ASTLeaf {
 
-    protected static final int UNKNOWN=-1;
-    protected int nest,index;
+    protected static final int UNKNOWN = -1;
+    protected int nest, index;
+
     public Name(Token t) {
-        super(t);index=UNKNOWN;
+        super(t);
+        index = UNKNOWN;
     }
 
-    public String name(){return token().getText();}
+    public String name() {
+        return token().getText();
+    }
 
     @Override
     public void lookup(Symbols symbol) {
-        Symbols.Location loc=symbol.get(name());
+        Symbols.Location loc = symbol.get(name());
 
-        if (loc==null){
-            throw new StoneExcetion("未定义的名称 "+name(),this);
-        }else {
-            nest=loc.nest;
-            index=loc.index;
+        if (loc == null) {
+            throw new StoneExcetion("未定义的名称 " + name(), this);
+        } else {
+            nest = loc.nest;
+            index = loc.index;
         }
     }
 
-    public void lookupForAssign(Symbols sym){
-        Symbols.Location loc=sym.put(name());
-        nest=loc.nest;
-        index=loc.index;
+    public void lookupForAssign(Symbols sym) {
+        Symbols.Location loc = sym.put(name());
+        nest = loc.nest;
+        index = loc.index;
     }
 
 
     @Override
     public Object eval(Environment env) {
-        if (index==UNKNOWN){
+        if (index == UNKNOWN) {
             return env.get(name());
-        }else if (nest==MemberSymbols.FIELD){
+        } else if (nest == MemberSymbols.FIELD) {
             return getThis(env).read(index);
-        }else if (nest==MemberSymbols.METHOD){
+        } else if (nest == MemberSymbols.METHOD) {
             return getThis(env).method(index);
-        }else {
-            return env.get(nest,index);
+        } else {
+            return env.get(nest, index);
         }
     }
 
     private OptStoneObject getThis(Environment env) {
-       return (OptStoneObject) env.get(0,0);
+        return (OptStoneObject) env.get(0, 0);
     }
 
-    public void  evalForAssign(Environment env,Object val){
-        if (index==UNKNOWN){
-            env.put(name(),val);
-        }else if (nest==MemberSymbols.FIELD){
-            getThis(env).write(index,val);
-        }else if (nest==MemberSymbols.METHOD){
-            throw new StoneExcetion("无法更新方法 "+name(),this);
+    public void evalForAssign(Environment env, Object val) {
+        if (index == UNKNOWN) {
+            env.put(name(), val);
+        } else if (nest == MemberSymbols.FIELD) {
+            getThis(env).write(index, val);
+        } else if (nest == MemberSymbols.METHOD) {
+            throw new StoneExcetion("无法更新方法 " + name(), this);
+        } else {
+            env.put(nest, index, val);
+        }
+    }
+
+    @Override
+    public void compiler(Code c) {
+        if (nest > 0) {
+            c.add(GMOVE);
+            c.add(encodeShortOffset(index));
+            c.add(encodeRegister(c.nextReg++));
         }else {
-            env.put(nest,index,val);
+            c.add(MOVE);
+            c.add(encodeOffset(index));
+            c.add(encodeRegister(c.nextReg++));
+        }
+    }
+
+    public void compilerAssign(Code c){
+        if (nest>0){
+            c.add(GMOVE);
+            c.add(encodeRegister(c.nextReg-1));
+            c.add(encodeShortOffset(index));
+        }else {
+            c.add(MOVE);
+            c.add(encodeRegister(c.nextReg-1));
+            c.add(encodeOffset(index));
         }
     }
 }

@@ -1,6 +1,14 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.tool.Log;
+import com.misakimei.stone.vm.Code;
+import com.misakimei.stone.vm.EnvEx;
+import com.misakimei.stone.vm.StoneVM;
+import com.misakimei.stone.vm.VMFunction;
+
 import java.util.List;
+
+import static com.misakimei.stone.vm.Opcode.*;
 
 /**
  * Created by 18754 on 2016/7/29.
@@ -30,22 +38,39 @@ public class Arguments extends Postfix{
             return fun.invoke(arg,this);
         }
 
-        if (val instanceof Function)
-        {
-            Function fun= (Function) val;
-            ParamterList params=fun.getParamters();
-            if (size()!=params.size()){
-                throw new StoneExcetion("参数不够 ",this);
-            }
-            Environment nenv=fun.makeEnv();
-            int num=0;
-            for (ASTree a:this){
-                params.eval(nenv,num++,a.eval(env));//将参数的值填入方法的内部环境
-            }
-            //闭包原理就在于此 每次执行时重新执行函数内部 创建新的环境
-            return fun.getBody().eval(nenv);
-        }
-        throw new StoneExcetion("找不到函数",this);
 
+        if (!(val instanceof VMFunction)){throw new StoneExcetion("无法使用此函数 ");}
+
+        VMFunction func= (VMFunction) val;
+        ParamterList params=func.getParamters();
+        if (size()!=params.size()){throw new StoneExcetion("函数的参数无法匹配");}
+
+        int num=0;
+        for (ASTree t:this){
+            params.eval(env,num++,t.eval(env));
+        }
+        StoneVM vm=((EnvEx)env).stoneVM();
+
+        vm.run(func.entry());
+        return vm.stack()[0];
+    }
+
+    @Override
+    public void compiler(Code c) {
+        int newoffset=c.frameSize;
+        int numofargs=0;
+        for (ASTree t:this){
+            t.compiler(c);
+            c.add(MOVE);
+            c.add(encodeRegister(--c.nextReg));
+            c.add(encodeOffset(newoffset++));
+            numofargs++;
+        }
+        c.add(CALL);
+        c.add(encodeRegister(--c.nextReg));
+        c.add(encodeOffset(numofargs));
+        c.add(MOVE);
+        c.add(encodeOffset(c.frameSize));
+        c.add(encodeRegister(c.nextReg++));
     }
 }
