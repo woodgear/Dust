@@ -1,8 +1,8 @@
 package com.misakimei.stone;
 
-import com.misakimei.stone.vm.Code;
-
-import static com.misakimei.stone.vm.Opcode.*;
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 
 /**
  * Created by 18754 on 2016/7/27.
@@ -11,6 +11,10 @@ public class Name extends ASTLeaf {
 
     protected static final int UNKNOWN = -1;
     protected int nest, index;
+    protected TypeInfo type;
+
+
+
 
     public Name(Token t) {
         super(t);
@@ -68,29 +72,25 @@ public class Name extends ASTLeaf {
             env.put(nest, index, val);
         }
     }
-
     @Override
-    public void compiler(Code c) {
-        if (nest > 0) {
-            c.add(GMOVE);
-            c.add(encodeShortOffset(index));
-            c.add(encodeRegister(c.nextReg++));
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        type=tenv.get(nest,index);
+        if (type==null){
+            throw new TypeException("无法确定 "+name()+" 的类型",this);
         }else {
-            c.add(MOVE);
-            c.add(encodeOffset(index));
-            c.add(encodeRegister(c.nextReg++));
+            return type;
+        }
+    }
+    public TypeInfo typeCheckForAssign(TypeEnv tenv,TypeInfo valueType)throws TypeException{
+        type=tenv.get(nest,index);
+        if (type==null){
+            tenv.put(0,index,valueType);
+            return valueType;
+        }else {
+            valueType.assertSubtypeOf(type,tenv,this);
+            return type;
         }
     }
 
-    public void compilerAssign(Code c){
-        if (nest>0){
-            c.add(GMOVE);
-            c.add(encodeRegister(c.nextReg-1));
-            c.add(encodeShortOffset(index));
-        }else {
-            c.add(MOVE);
-            c.add(encodeRegister(c.nextReg-1));
-            c.add(encodeOffset(index));
-        }
-    }
+
 }

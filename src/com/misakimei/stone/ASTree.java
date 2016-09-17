@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
 import java.util.Iterator;
@@ -17,6 +20,9 @@ public abstract class ASTree implements Iterable<ASTree>{
         return children();
     }
     public void lookup(Symbols symbol){}
-    public void compiler(Code c){}
+
+    public TypeInfo typecheck(TypeEnv tenv)throws TypeException {
+        return null;
+    }
 
 }

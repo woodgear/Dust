@@ -1,5 +1,7 @@
 package com.misakimei.stone;
-import static com.misakimei.stone.Parser.rule;
+import com.misakimei.stone.parser.Parser;
+
+import static com.misakimei.stone.parser.Parser.rule;
 
 /**
  * Created by 18754 on 2016/7/29.
@@ -16,12 +18,12 @@ public class FuncParse extends BasicParser {
      * simple       :   expr [args]
      * program      :   [def|statement](";"|EOL)
      */
-    Parser param=rule().identifier(reserved);
+    protected Parser param=rule().identifier(reserved);
     Parser params=rule(ParamterList.class)
                     .ast(param).repeat(rule().sep(",").ast(param));
-    Parser paramsList=rule().sep("(").maybe(params).sep(")");
-    Parser def=rule(DefStmnt.class)
-                .sep("def").identifier(reserved).ast(paramsList).ast(block);
+    protected Parser paramList =rule().sep("(").maybe(params).sep(")");
+    protected Parser def=rule(DefStmnt.class)
+                .sep("def").identifier(reserved).ast(paramList).ast(block);
     Parser args=rule(Arguments.class)
             .ast(expr).repeat(rule().sep(",").ast(expr));
     Parser postfix=rule().sep("(").maybe(args).sep(")");

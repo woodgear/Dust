@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
 import java.util.List;
@@ -50,24 +53,11 @@ public class WhileStmnt extends ASTList {
         return con;
     }
 
-
     @Override
-    public void compiler(Code c) {
-        int oldreg=c.nextReg;
-        c.add(BCONST);
-        c.add((byte)0);
-        c.add(encodeRegister(c.nextReg++));
-        int pos=c.position();
-        condition().compiler(c);
-        int pos2=c.position();
-        c.add(IFZERO);
-        c.add(encodeRegister(c.nextReg++));
-        c.add(encodeShortOffset(0));
-        c.nextReg=oldreg;
-        body().compiler(c);
-        int pos3=c.position();
-        c.add(GOTO);
-        c.add(encodeShortOffset(pos-pos3));
-        c.set(encodeShortOffset(c.position()-pos2),pos2+2);
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        TypeInfo condtype=condition().typecheck(tenv);
+        condtype.assertSubtypeOf(TypeInfo.INT,tenv,this);
+        TypeInfo bodytype=body().typecheck(tenv);
+        return bodytype.union(TypeInfo.INT,tenv);
     }
 }

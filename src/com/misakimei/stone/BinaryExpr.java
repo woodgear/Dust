@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 import com.misakimei.stone.vm.Opcode;
 
@@ -14,6 +17,7 @@ public class BinaryExpr extends ASTList {
 
     protected OptClassInfo classInfo=null;
     protected int index;
+    protected TypeInfo leftType,rightType;
 
 
     public BinaryExpr(List<ASTree> lis) {
@@ -138,7 +142,6 @@ public class BinaryExpr extends ASTList {
         return rvalue;
     }
 
-
     @Override
     public void lookup(Symbols symbol) {
         ASTree left=left();
@@ -154,46 +157,32 @@ public class BinaryExpr extends ASTList {
     }
 
     @Override
-    public void compiler(Code c)
-    {
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
         String op=operator();
-        if (op.equals("=")){
-            ASTree l=left();
-            if (l instanceof Name){
-                right().compiler(c);
-                ((Name) l).compilerAssign(c);
-            }else {
-                throw new StoneExcetion("错误的 =");
-            }
+        if ("=".equals(op)){
+            return typecheckForAssign(tenv);
         }else {
-            left().compiler(c);
-            right().compiler(c);
-            c.add(getOpCode(op));
-            c.add(encodeRegister(c.nextReg-2));
-            c.add(encodeRegister(c.nextReg-1));
-            c.nextReg--;
+            leftType=left().typecheck(tenv);
+            rightType=right().typecheck(tenv);
+            if ("+".equals(op)){
+                return leftType.plus(rightType,tenv);
+            }else if ("==".equals(op)){
+                return TypeInfo.INT;
+            }else {
+                leftType.assertSubtypeOf(TypeInfo.INT,tenv,this);
+                rightType.assertSubtypeOf(TypeInfo.INT,tenv,this);
+                return TypeInfo.INT;
+            }
         }
     }
-    private byte getOpCode(String op) {
 
-        switch (op){
-            case "+":
-                return ADD;
-            case "-":
-                return SUB;
-            case "*":
-                return MUL;
-            case "/":
-                return DIV;
-            case "%":
-                return REM;
-            case "==":
-                return EQUAL;
-            case ">":
-                return MORE;
-            case "<":
-                return LESS;
-            default:throw new StoneExcetion("操作符错误 ",this);
+    private TypeInfo typecheckForAssign(TypeEnv tenv) {
+        rightType=right().typecheck(tenv);
+        ASTree lf=left();
+        if (lf instanceof Name){
+            return ((Name) lf).typeCheckForAssign(tenv,rightType);
+        }else {
+            throw new TypeException("无法赋值 类型错误",this);
         }
     }
 }

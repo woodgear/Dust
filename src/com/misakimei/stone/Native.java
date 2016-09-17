@@ -20,7 +20,7 @@ public class Native {
 
     //具体的增加原生函数的方法
     //将clazz类中的名字叫name参数是params的函数加到env中 名字是methodname
-    private void append(Environment env, String name, Class<?> clazz, String methodname, Class<?>... params) {
+    protected void append(Environment env, String name, Class<?> clazz, String methodname, Class<?>... params) {
         Method m = null;
         try {
             m = clazz.getMethod(methodname, params);

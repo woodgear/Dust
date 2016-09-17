@@ -1,6 +1,9 @@
 package com.misakimei.stone;
 
 import com.misakimei.stone.tool.Log;
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
 import java.util.List;
@@ -53,18 +56,17 @@ public class PrimaryExpr extends ASTList {
         super.lookup(symbol);
     }
 
-
     @Override
-    public void compiler(Code c) {
-        compilerSubExpr(c,0);
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        return typecheck(0,tenv);
     }
 
-    private void compilerSubExpr(Code c, int nest) {
+    private TypeInfo typecheck(int nest, TypeEnv tenv) {
         if (hasPostfix(nest)){
-            compilerSubExpr(c,nest+1);
-            postfix(nest).compiler(c);
+            TypeInfo target=typecheck(nest+1,tenv);
+            return postfix(nest).typecheck(tenv,target);
         }else {
-            operand().compiler(c);
+            return operand().typecheck(tenv);
         }
     }
 }

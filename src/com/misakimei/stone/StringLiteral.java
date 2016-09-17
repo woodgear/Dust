@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 import static com.misakimei.stone.vm.Opcode.SCONST;
 import static com.misakimei.stone.vm.Opcode.encodeRegister;
@@ -22,10 +25,7 @@ public class StringLiteral extends ASTLeaf {
     }
 
     @Override
-    public void compiler(Code c) {
-        int i=c.record(value());
-        c.add(SCONST);
-        c.add(encodeShortOffset(i));
-        c.add(encodeRegister(c.nextReg++));
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        return TypeInfo.STRING;
     }
 }

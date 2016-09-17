@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
 import java.util.List;
@@ -15,6 +18,8 @@ public class BlockStment extends ASTList {
         super(lis);
     }
 
+    TypeInfo type;
+
     @Override
     public Object eval(Environment env) {
         Object result=0;
@@ -27,17 +32,13 @@ public class BlockStment extends ASTList {
     }
 
     @Override
-    public void compiler(Code c) {
-        if (this.numChildren()>0){
-            int initreg=c.nextReg;
-            for (ASTree a:this){
-                c.nextReg=initreg;
-                a.compiler(c);
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        type=TypeInfo.INT;
+        for (ASTree a:this){
+            if (!(a instanceof NULLStmnt)){
+                type=a.typecheck(tenv);
             }
-        }else {
-            c.add(BCONST);
-            c.add((byte) 0);
-            c.add(encodeRegister(c.nextReg++));
         }
+        return type;
     }
 }

@@ -1,5 +1,7 @@
 package com.misakimei.stone;
-import static com.misakimei.stone.Parser.rule;
+import com.misakimei.stone.parser.Parser;
+
+import static com.misakimei.stone.parser.Parser.rule;
 /**
  * Created by 18754 on 2016/7/31.
  */

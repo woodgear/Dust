@@ -1,5 +1,8 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
 import java.util.List;
@@ -11,6 +14,7 @@ import static com.misakimei.stone.vm.Opcode.encodeRegister;
  * Created by 18754 on 2016/7/27.
  */
 public class NegativeExpr extends ASTList {
+
     public NegativeExpr(List<ASTree> lis) {
         super(lis);
     }
@@ -34,10 +38,9 @@ public class NegativeExpr extends ASTList {
     }
 
     @Override
-    public void compiler(Code c) {
-        operand().compiler(c);
-        c.add(NEG);
-        c.add(encodeRegister(c.nextReg-1));
-
+    public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
+        TypeInfo t=operand().typecheck(tenv);
+        t.assertSubtypeOf(TypeInfo.INT,tenv,this);
+        return TypeInfo.INT;
     }
 }

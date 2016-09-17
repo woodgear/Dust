@@ -1,6 +1,10 @@
 package com.misakimei.stone;
 
 import com.misakimei.stone.tool.Log;
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
+import com.misakimei.stone.type.TypeTag;
 import com.misakimei.stone.vm.Code;
 import com.misakimei.stone.vm.EnvEx;
 import com.misakimei.stone.vm.StoneVM;
@@ -15,6 +19,8 @@ import static com.misakimei.stone.vm.Opcode.*;
  */
 public class Arguments extends Postfix{
 
+    protected TypeInfo[]argTypes;
+    protected TypeInfo.FuncitonType funcitonType;
 
     public Arguments(List<ASTree> lis) {
         super(lis);
@@ -39,38 +45,36 @@ public class Arguments extends Postfix{
         }
 
 
-        if (!(val instanceof VMFunction)){throw new StoneExcetion("无法使用此函数 ");}
+        if (!(val instanceof Function)){throw new StoneExcetion("无法使用此函数 ");}
 
-        VMFunction func= (VMFunction) val;
+        Function func= (Function) val;
         ParamterList params=func.getParamters();
         if (size()!=params.size()){throw new StoneExcetion("函数的参数无法匹配");}
-
+        Environment newenv=func.makeEnv();
         int num=0;
-        for (ASTree t:this){
-            params.eval(env,num++,t.eval(env));
+        for (ASTree a:this){
+            params.eval(newenv,num++,a.eval(env));
         }
-        StoneVM vm=((EnvEx)env).stoneVM();
-
-        vm.run(func.entry());
-        return vm.stack()[0];
+        return func.getBody().eval(newenv);
     }
 
     @Override
-    public void compiler(Code c) {
-        int newoffset=c.frameSize;
-        int numofargs=0;
-        for (ASTree t:this){
-            t.compiler(c);
-            c.add(MOVE);
-            c.add(encodeRegister(--c.nextReg));
-            c.add(encodeOffset(newoffset++));
-            numofargs++;
+    public TypeInfo typecheck(TypeEnv tenv, TypeInfo target) throws TypeException {
+        if (!(target instanceof TypeInfo.FuncitonType)){
+            throw new TypeException("函数 错误",this);
         }
-        c.add(CALL);
-        c.add(encodeRegister(--c.nextReg));
-        c.add(encodeOffset(numofargs));
-        c.add(MOVE);
-        c.add(encodeOffset(c.frameSize));
-        c.add(encodeRegister(c.nextReg++));
+        funcitonType= (TypeInfo.FuncitonType) target;
+        TypeInfo[]params=funcitonType.parameterTypes;
+        if (size()!=params.length){
+            throw new TypeException("函数 参数数量错误",this);
+        }
+        argTypes=new TypeInfo[params.length];
+        int num=0;
+        for (ASTree a:this){
+            TypeInfo t=argTypes[num]=a.typecheck(tenv);
+            t.assertSubtypeOf(params[num++],tenv,this);
+        }
+        return funcitonType.returntype;
     }
+
 }

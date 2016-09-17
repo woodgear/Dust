@@ -1,5 +1,9 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
+
 import java.util.List;
 
 /**
@@ -11,4 +15,5 @@ public abstract class Postfix extends ASTList {
     }
 
     public abstract Object eval(Environment env,Object value);
+    public  TypeInfo typecheck(TypeEnv tenv,TypeInfo tatget)throws TypeException{return null;};
 }

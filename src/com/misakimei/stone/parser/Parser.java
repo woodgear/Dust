@@ -1,8 +1,10 @@
-package com.misakimei.stone;
+package com.misakimei.stone.parser;
 
 /**
  * Created by 18754 on 2016/7/27.
  */
+import com.misakimei.stone.*;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;

@@ -1,0 +1,4 @@
+def f(n:Int):Int{
+n+1
+}
+f(10)

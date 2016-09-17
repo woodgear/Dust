@@ -1,5 +1,9 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.TypeEnv;
+import com.misakimei.stone.type.TypeException;
+import com.misakimei.stone.type.TypeInfo;
+
 import java.util.List;
 import java.util.Objects;
 
@@ -29,4 +33,5 @@ public class ArrayRef extends Postfix {
         }
         throw new StoneExcetion("无法访问此数组");
     }
+
 }
