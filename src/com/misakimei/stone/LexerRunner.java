@@ -20,8 +20,8 @@ public class LexerRunner {
               }
 
         } catch (FileNotFoundException e) {
-            Log.e("找不到文件 "+code.getAbsolutePath());
-            System.out.println("not find");
+            Log.d("找不到文件 "+code.getAbsolutePath());
+            Log.d("not find");
         }
     }
 }

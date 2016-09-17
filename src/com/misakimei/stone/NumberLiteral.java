@@ -30,4 +30,9 @@ public class NumberLiteral extends ASTLeaf {
     public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
         return TypeInfo.INT;
     }
+
+    @Override
+    public String translate(TypeInfo res) {
+        return Integer.toString(value());
+    }
 }

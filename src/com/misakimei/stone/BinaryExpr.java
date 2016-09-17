@@ -1,11 +1,12 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.tool.Log;
 import com.misakimei.stone.type.TypeEnv;
 import com.misakimei.stone.type.TypeException;
 import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 import com.misakimei.stone.vm.Opcode;
-
+import static com.misakimei.stone.type.ToJava.*;
 import java.util.List;
 
 import static com.misakimei.stone.vm.Opcode.*;
@@ -183,6 +184,35 @@ public class BinaryExpr extends ASTList {
             return ((Name) lf).typeCheckForAssign(tenv,rightType);
         }else {
             throw new TypeException("无法赋值 类型错误",this);
+        }
+    }
+
+    @Override
+    public String translate(TypeInfo res) {
+        String op=operator();
+        if ("=".equals(op)){
+            return ((Name)left()).translateAssign(rightType,right());
+        }else if (leftType.type()!=TypeInfo.INT||rightType.type()!=TypeInfo.INT){
+            String e1=transloateExpr(left(),leftType,TypeInfo.ANY);
+            String e2=transloateExpr(right(),rightType,TypeInfo.ANY);
+            if ("==".equals(op)){
+                return "com.misakimei.stone.type.Runtime.eq("+e1+","+e2+")";
+            }else if ("+".equals(op)){
+                if (leftType.type()==TypeInfo.STRING||rightType.type()==TypeInfo.STRING){
+                    return e1+"+"+e2;
+                }else {
+                    return "com.misakimei.stone.type.Runtime.plus("+e1+","+e2+")";
+                }
+            }else {
+                throw new StoneExcetion("非法的操作符",this);
+            }
+        }else {
+            String expr=left().translate(null)+op+right().translate(null);
+            if ("<".equals(op)||">".equals(op)||"==".equals(op)){
+                return "("+expr+"?1:0)";
+            }else {
+                return "("+expr+")";
+            }
         }
     }
 }

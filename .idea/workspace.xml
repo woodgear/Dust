@@ -4,14 +4,52 @@
     <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/Lexer.java" line="92" />
     <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/Lexer.java" line="61" />
     <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/run/EnvOptInterpreter.java" />
-    <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" line="130" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" line="131" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0598930c-3352-4576-923d-6a4f7877b016" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/typefun.stone" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/JavaFunction.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/JavaLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/Runtime.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/ToJava.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/ASTree.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/ASTree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BasicEnv.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BasicEnv.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BinaryExpr.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BinaryExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BlockStment.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/BlockStment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/Environment.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/Environment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/IfStmnt.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/IfStmnt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/LexerRunner.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/LexerRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/Name.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/Name.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/NegativeExpr.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/NegativeExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/NumberLiteral.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/NumberLiteral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/PrimaryExpr.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/PrimaryExpr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/StringLiteral.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/StringLiteral.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/WhileStmnt.class" afterPath="$PROJECT_DIR$/out/production/Stone/com/misakimei/stone/WhileStmnt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stone.iml" afterPath="$PROJECT_DIR$/Stone.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/fun.stone" afterPath="$PROJECT_DIR$/data/fun.stone" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/ArrayEnv.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/ArrayEnv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/BasicEnv.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/BasicEnv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeEnv.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeEnv.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Environment.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/Environment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/LexerRunner.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/LexerRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Name.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/Name.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/NegativeExpr.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/NegativeExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/NestEnv.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/NestEnv.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/NumberLiteral.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/NumberLiteral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/WhileStmnt.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/WhileStmnt.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/misakimei/stone/type/VarStmnt.java" afterPath="$PROJECT_DIR$/src/com/misakimei/stone/type/VarStmnt.java" />
     </list>
     <ignored path="Stone.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,66 +70,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TypedParse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypedParse.java">
+      <file leaf-file-name="TypedInterpreter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="29" />
+            <state relative-caret-position="302">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ASTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java">
+      <file leaf-file-name="BlockStment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="204">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="typecheck.stone" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/typecheck.stone">
+      <file leaf-file-name="IfStmnt.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+            <state relative-caret-position="288">
+              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeInfo.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java">
+      <file leaf-file-name="JavaLoader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/JavaLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+            <state relative-caret-position="197">
+              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#403#514#0" expanded="true" />
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#703#704#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-                <element signature="e#2447#2448#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
-                <element signature="e#2582#2583#0" expanded="true" />
-                <element signature="e#2654#2655#0" expanded="true" />
-                <element signature="e#2952#2953#0" expanded="true" />
-                <element signature="e#2995#2996#0" expanded="true" />
-                <element signature="e#3038#3039#0" expanded="true" />
-                <element signature="e#3070#3071#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TypeEnv.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeEnv.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -99,22 +115,36 @@
       <file leaf-file-name="DefStmnt.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="554">
-              <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+            <state relative-caret-position="120">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
               <folding>
-                <element signature="e#1062#1063#0" expanded="true" />
-                <element signature="e#1107#1108#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arguments.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java">
+      <file leaf-file-name="JavaFunction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/JavaFunction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="903">
-              <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+            <state relative-caret-position="231">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArrayEnv.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ArrayEnv.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="method#ArrayEnv#0;class#ArrayEnv#0" expanded="false" />
+                <element signature="method#get#0;class#ArrayEnv#0" expanded="false" />
+                <element signature="e#855#856#0" expanded="true" />
+                <element signature="method#put#0;class#ArrayEnv#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -122,28 +152,31 @@
       <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/tool/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="231">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
+              <folding>
+                <element signature="e#134#135#0" expanded="true" />
+                <element signature="e#173#174#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapMaker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/javassist/bytecode/stackmap/MapMaker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fun.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Fun.java">
+      <file leaf-file-name="print.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/print.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Function.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Function.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="199">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -190,57 +223,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/HeapMemory.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NativeFunction.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/VMFunction.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/EnvEx.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/ASTreeVmEx.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/ASTListEx.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/DefStmntVmEx.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Environment.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/run/EnvOptInterpreter.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/StoneVMEnv.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/Opcode.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/Code.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/tool/Log.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/vm/StoneVM.java" />
-        <option value="$PROJECT_DIR$/data/fun.stone" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/run/VMInterpreter.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeParse.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/Parser/Parser.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/FuncParse.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypedParse.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeTag.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypedEvaluator.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NumberLiteral.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeException.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NegativeExpr.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Name.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/WhileStmnt.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/ASTList.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/VarStmnt.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/Native.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/currenttime.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/length.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/print.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/read.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/toint.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypedNatives.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/ArrayRef.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/ParamterList.java" />
         <option value="$PROJECT_DIR$/data/typecheck.stone" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeEnv.java" />
-        <option value="$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java" />
         <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/ToJava.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/EnvEx3.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/ArrayEnv.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NumberLiteral.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Name.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NegativeExpr.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/WhileStmnt.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/VarStmnt.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/Runtime.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/NestEnv.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Environment.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/BasicEnv.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java" />
+        <option value="C:/Program Files/Java/jdk1.8.0_77/jre/lib/ext/javassist.jar!/javassist/ClassPool.class" />
+        <option value="$PROJECT_DIR$/src/javassist/util/HotSwapper.java" />
+        <option value="$PROJECT_DIR$/src/javassist/CtClassType.java" />
+        <option value="$PROJECT_DIR$/src/javassist/Loader.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/JavaFunction.java" />
+        <option value="$PROJECT_DIR$/data/fun.stone" />
+        <option value="$PROJECT_DIR$/data/typefun.stone" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java" />
+        <option value="$PROJECT_DIR$/src/javassist/CtNewMethod.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/LexerRunner.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/print.java" />
+        <option value="$PROJECT_DIR$/src/com/misakimei/stone/type/JavaLoader.java" />
       </list>
     </option>
   </component>
@@ -291,12 +324,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches">
-        <subPane />
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -304,6 +331,32 @@
               <option name="myItemId" value="Stone" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tools.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Stone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="&lt; 1.8 (1) &gt;" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -329,7 +382,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stone" />
+              <option name="myItemId" value="javassist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,32 +401,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="type" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stone" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -414,6 +441,9 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
       </pane>
       <pane id="Scope">
         <subPane subId="Problems">
@@ -458,16 +488,20 @@
         </subPane>
         <subPane subId="Tests" />
       </pane>
+      <pane id="Scratches">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="def&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;TypeE&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/type/TypeEnv.java&#10;Unknow&#9;PSI&#9;JAVA://com.misakimei.stone.type.TypeInfo.UnknownType&#10;plus&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Plus&#10;Log&#9;PSI&#9;JAVA://com.misakimei.stone.tool.Log&#10;Fun&#9;PSI&#9;JAVA://com.misakimei.stone.Function&#10;para&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Nati&#9;PSI&#9;JAVA://com.misakimei.stone.Native&#10;Type&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/TypeEnv.java&#10;var&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/VarStmnt.java&#10;Argu&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Arguments.java&#10;PO&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Postfix.java&#10;POs&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Postfix.java&#10;Prim&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/PrimaryExpr.java&#10;Pa&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Def&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;WHi&#9;PSI&#9;JAVA://com.misakimei.stone.WhileStmnt&#10;IF&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/IfStmnt.java&#10;Blo&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;Bin&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BinaryExpr.java&#10;Neg&#9;PSI&#9;JAVA://com.misakimei.stone.NegativeExpr&#10;Name&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Name.java&#10;Stri&#9;PSI&#9;JAVA://com.misakimei.stone.StringLiteral&#10;NUm&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/NumberLiteral.java&#10;Ast&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ASTree.java&#10;Param&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Ty&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/TypeTag.java&#10;fun&#9;FILE&#9;file://D:/Project/MyWorld/Stone/data/fun.stone&#10;Ston&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/StoneVM.java&#10;vm&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/VMFunction.java&#10;DEF&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;BLO&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;nuM&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/NumberLiteral.java&#10;sTON&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/StoneVM.java&#10;if&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/IfStmnt.java&#10;prim&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/PrimaryExpr.java&#10;blo&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;Ar&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Arguments.java&#10;de&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;Whi&#9;PSI&#9;JAVA://com.misakimei.stone.WhileStmnt&#10;Nega&#9;PSI&#9;JAVA://com.misakimei.stone.NegativeExpr&#10;String&#9;PSI&#9;JAVA://com.misakimei.stone.StringLiteral&#10;S&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/StoneVM.java&#10;bin&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BinaryExpr.java&#10;Dot&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Dot.java&#10;clas&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ClassStmnt.java&#10;Res&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ResizableArrayEnv.java&#10;Me&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/OptMethod.java&#10;name&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Name.java&#10;dot&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Dot.java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="Argu&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/Arguments.java&#10;Name&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/Name.java&#10;Java&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/type/JavaLoader.java&#10;Run&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/type/Runtime.java&#10;Bin&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/BinaryExpr.java&#10;def&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;JavaL&#9;PSI&#9;JAVA://com.misakimei.stone.type.JavaLoader&#10;Var&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/type/VarStmnt.java&#10;Pos&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/Postfix.java&#10;Prim&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/PrimaryExpr.java&#10;Whi&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/WhileStmnt.java&#10;if&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/IfStmnt.java&#10;BLO&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;Neg&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/NegativeExpr.java&#10;Nam&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/Name.java&#10;String&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/StringLiteral.java&#10;NUm&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/NumberLiteral.java&#10;Astr&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/ASTree.java&#10;Array&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/ArrayEnv.java&#10;Env&#9;PSI&#9;JAVA://com.misakimei.stone.vm.EnvEx&#10;Arr&#9;PSI&#9;JAVA://com.misakimei.stone.ArrayEnv&#10;TypeE&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/type/TypeEnv.java&#10;Unknow&#9;PSI&#9;JAVA://com.misakimei.stone.type.TypeInfo.UnknownType&#10;plus&#9;PSI&#9;JAVA://com.sun.org.apache.xpath.internal.operations.Plus&#10;Log&#9;PSI&#9;JAVA://com.misakimei.stone.tool.Log&#10;Fun&#9;PSI&#9;JAVA://com.misakimei.stone.Function&#10;para&#9;FILE&#9;file://D:/Project/TheWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Nati&#9;PSI&#9;JAVA://com.misakimei.stone.Native&#10;Type&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/TypeEnv.java&#10;var&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/VarStmnt.java&#10;PO&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Postfix.java&#10;POs&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Postfix.java&#10;Pa&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Def&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;WHi&#9;PSI&#9;JAVA://com.misakimei.stone.WhileStmnt&#10;IF&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/IfStmnt.java&#10;Blo&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;Stri&#9;PSI&#9;JAVA://com.misakimei.stone.StringLiteral&#10;Ast&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ASTree.java&#10;Param&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/ParamterList.java&#10;Ty&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/type/TypeTag.java&#10;fun&#9;FILE&#9;file://D:/Project/MyWorld/Stone/data/fun.stone&#10;Ston&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/StoneVM.java&#10;vm&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/VMFunction.java&#10;DEF&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/DefStmnt.java&#10;nuM&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/NumberLiteral.java&#10;sTON&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/vm/StoneVM.java&#10;prim&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/PrimaryExpr.java&#10;blo&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/BlockStment.java&#10;Ar&#9;FILE&#9;file://D:/Project/MyWorld/Stone/src/com/misakimei/stone/Arguments.java" />
+    <property name="last_opened_file_path" value="D:/Program/Java/java8/jdk1.8.0_77/lib/tools.jar!/" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -913,7 +947,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474088149757</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="14.4:对类型省略的变量进行类型推论">
+      <created>1474089655925</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1474089655925</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TodoView">
@@ -927,7 +968,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -935,15 +976,15 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9408284" sideWeight="0.5029762" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5606509" sideWeight="0.49702382" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34615386" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35946745" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32840237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22842261" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2001488" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3210059" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46153846" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37721893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1004,7 +1045,8 @@
     <MESSAGE value="上课去了" />
     <MESSAGE value="第13天:设计中间代码解释器" />
     <MESSAGE value="14.3:运行程序时执行类型检查&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="14.3:运行程序时执行类型检查&#10;" />
+    <MESSAGE value="14.4:对类型省略的变量进行类型推论" />
+    <option name="LAST_COMMIT_MESSAGE" value="14.4:对类型省略的变量进行类型推论" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1015,11 +1057,17 @@
           <properties />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java</url>
-          <line>81</line>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java</url>
+          <line>69</line>
           <properties />
-          <option name="timeStamp" value="37" />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/misakimei/stone/vm/StoneVM.java</url>
@@ -1027,17 +1075,11 @@
           <properties class="com.misakimei.stone.vm.StoneVM" method="run" />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java</url>
-          <line>29</line>
-          <properties class="com.misakimei.stone.Arguments" method="eval" />
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="40" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1051,254 +1093,259 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/FuncParse.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/vm/StoneVMEnv.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="143">
+          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeTag.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/EnvEx3.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/vm/EnvEx.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="147">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypedEvaluator.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/description.html">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/project-template.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/lang/RuntimeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/StoneExcetion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="336">
+          <caret line="26" column="53" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/NumberLiteral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="30" column="26" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#241#242#0" expanded="false" />
-            <element signature="e#265#266#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Name.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-840">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#lookup#0;class#Name#0" expanded="false" />
-            <element signature="method#lookupForAssign#0;class#Name#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="28" column="31" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-          <folding />
+        <state relative-caret-position="358">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/NegativeExpr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="211">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/StringLiteral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="484">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/WhileStmnt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="358">
+          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/VarStmnt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        <state relative-caret-position="987">
+          <caret line="63" column="79" selection-start-line="63" selection-start-column="79" selection-end-line="63" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/currenttime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Environment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/NestEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding>
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#869#870#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/BasicEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1216#1217#0" expanded="false" />
+            <element signature="e#1243#1244#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Dot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ArrayRef.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/parser/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ASTList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/ToJava.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/javassist.jar!/javassist/CtClassType.class" />
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ResizableArrayEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#310#311#0" expanded="false" />
+            <element signature="e#338#339#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/jre/lib/ext/javassist.jar!/javassist/ClassPool.class" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/util/HotSwapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/CtNewClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/ClassPool.java" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/Loader.java" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/CtClassType.java" />
+    <entry file="file://$PROJECT_DIR$/src/javassist/CtClass.java" />
+    <entry file="jar://D:/Program/Java/java8/jdk1.8.0_77/jre/lib/ext/javassist.jar!/javassist/CtClass.class" />
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/Runtime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Name.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="113" column="59" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Native.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/currenttime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/print.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/length.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/toInt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypedNatives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#309#310#0" expanded="false" />
-            <element signature="e#335#336#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/BasicInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="23" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        <state relative-caret-position="143">
+          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/FuncInterpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/javassist/CtNewMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="12" column="57" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="60" />
+        <state relative-caret-position="227">
+          <caret line="75" column="9" selection-start-line="75" selection-start-column="9" selection-end-line="75" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/ClassInterpreter.java">
+    <entry file="file://$PROJECT_DIR$/src/javassist/tools/web/Webserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="142" column="8" selection-start-line="142" selection-start-column="8" selection-end-line="142" selection-end-column="8" />
+          <folding>
+            <element signature="e#4505#4506#0" expanded="true" />
+            <element signature="e#4544#4545#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/typefun.stone">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="147">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/fun.stone">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/LexerRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/BinaryExpr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
+        <state relative-caret-position="248">
+          <caret line="197" column="33" selection-start-line="197" selection-start-column="33" selection-end-line="197" selection-end-column="33" />
           <folding>
             <element signature="method#computeOP#0;class#BinaryExpr#0" expanded="false" />
             <element signature="method#computeNumber#0;class#BinaryExpr#0" expanded="false" />
@@ -1308,186 +1355,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ArrayLiteral.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/print.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/testfun.stone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/fun.stone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/PrimaryExpr.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="84" column="5" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Postfix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="17" column="93" selection-start-line="17" selection-start-column="93" selection-end-line="17" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ArrayRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ParamterList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="56" column="42" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="42" />
-          <folding>
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypedParse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ASTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/typecheck.stone">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Fun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state relative-caret-position="199">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/tool/Log.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="231">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="e#134#135#0" expanded="true" />
+            <element signature="e#173#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/javassist/bytecode/stackmap/MapMaker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/Arguments.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/run/TypedInterpreter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="57" column="43" selection-start-line="57" selection-start-column="43" selection-end-line="57" selection-end-column="43" />
+        <state relative-caret-position="302">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/com/sun/org/apache/xpath/internal/operations/Plus.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/IfStmnt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        <state relative-caret-position="288">
+          <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeEnv.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/BlockStment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="43" column="17" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+        <state relative-caret-position="204">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/ArrayEnv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="method#ArrayEnv#0;class#ArrayEnv#0" expanded="false" />
+            <element signature="method#get#0;class#ArrayEnv#0" expanded="false" />
+            <element signature="e#855#856#0" expanded="true" />
+            <element signature="method#put#0;class#ArrayEnv#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/DefStmnt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="108" column="39" selection-start-line="108" selection-start-column="39" selection-end-line="108" selection-end-column="39" />
+        <state relative-caret-position="120">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/TypeInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/JavaFunction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="148" column="23" selection-start-line="148" selection-start-column="23" selection-end-line="148" selection-end-column="23" />
+        <state relative-caret-position="231">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/misakimei/stone/type/JavaLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#403#514#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
-            <element signature="e#2447#2448#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
-            <element signature="e#2582#2583#0" expanded="true" />
-            <element signature="e#2654#2655#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#2995#2996#0" expanded="true" />
-            <element signature="e#3038#3039#0" expanded="true" />
-            <element signature="e#3070#3071#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1520,7 +1475,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>1.8 (1)</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1543,9 +1498,21 @@
           </splitter-proportions>
         </settings>
       </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8 (1)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>log4j-api-2.6.2-javadoc</last-edited>
+          <last-edited>tools</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

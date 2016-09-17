@@ -5,6 +5,9 @@ import com.misakimei.stone.*;
 import java.util.Iterator;
 import java.util.List;
 
+import static com.misakimei.stone.type.ToJava.LOCAL;
+import static com.misakimei.stone.type.ToJava.transloateExpr;
+
 /**
  * Created by 18754 on 2016/9/12.
  */
@@ -54,5 +57,10 @@ public class VarStmnt extends ASTList {
         valuetype=initializer().typecheck(tenv);
         valuetype.assertSubtypeOf(vartype,tenv,this);
         return vartype;
+    }
+
+    @Override
+    public String translate(TypeInfo res) {
+        return LOCAL+index+"="+transloateExpr(initializer(),valuetype,vartype);
     }
 }

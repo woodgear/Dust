@@ -16,4 +16,5 @@ public abstract class Postfix extends ASTList {
 
     public abstract Object eval(Environment env,Object value);
     public  TypeInfo typecheck(TypeEnv tenv,TypeInfo tatget)throws TypeException{return null;};
+    public  String translate(String expr){return null;}
 }

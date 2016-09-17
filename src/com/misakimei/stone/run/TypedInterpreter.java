@@ -18,7 +18,7 @@ public class TypedInterpreter {
 
     public static void main(String[] args) {
         TypeEnv te=new TypeEnv();
-        run(new TypedParse(),new TypedNatives(te).environment(new ResizableArrayEnv()),te,"./data/typecheck.stone");
+        run(new TypedParse(),new TypedNatives(te).environment(new ResizableArrayEnv()),te,"./data/typefun.stone");
     }
     private static void run(BasicParser bp, Environment environment, TypeEnv te,String path) {
         try {

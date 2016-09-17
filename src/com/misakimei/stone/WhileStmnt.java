@@ -5,8 +5,10 @@ import com.misakimei.stone.type.TypeException;
 import com.misakimei.stone.type.TypeInfo;
 import com.misakimei.stone.vm.Code;
 
+import java.rmi.activation.ActivationGroup_Stub;
 import java.util.List;
 
+import static com.misakimei.stone.type.ToJava.returnZero;
 import static com.misakimei.stone.vm.Opcode.*;
 
 /**
@@ -59,5 +61,17 @@ public class WhileStmnt extends ASTList {
         condtype.assertSubtypeOf(TypeInfo.INT,tenv,this);
         TypeInfo bodytype=body().typecheck(tenv);
         return bodytype.union(TypeInfo.INT,tenv);
+    }
+
+    @Override
+    public String translate(TypeInfo res) {
+        String code="while("+condition().translate(null)+"!=0){\n"
+                +body().translate(res)
+                +"}\n";
+        if (res==null){
+            return code;
+        }else{
+            return returnZero(res)+"\n"+code;
+        }
     }
 }

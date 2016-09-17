@@ -1,8 +1,11 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.JavaFunction;
 import com.misakimei.stone.type.TypeEnv;
 import com.misakimei.stone.type.TypeException;
 import com.misakimei.stone.type.TypeInfo;
+
+import static com.misakimei.stone.type.ToJava.*;
 
 /**
  * Created by 18754 on 2016/7/27.
@@ -92,5 +95,23 @@ public class Name extends ASTLeaf {
         }
     }
 
-
+    @Override
+    public String translate(TypeInfo res) {
+        if (type.isFuncitonType()){
+            return JavaFunction.className(name()+"."+METHOD);
+        }else if (nest==0){
+            return LOCAL+index;
+        }else {
+            String expr=ENV+".get(0,"+index+")";
+            return transloateExpr(expr,TypeInfo.ANY,type);
+        }
+    }
+    public String translateAssign(TypeInfo valType,ASTree right){
+        if (nest==0){
+            return "("+LOCAL+index+"="+transloateExpr(right,valType,type)+")";
+        }else {
+            String val=right.translate(null);
+            return "com.misakimei.stone.type.Runtime.write"+type.toString()+"("+ENV+","+index+","+val+")";
+        }
+    }
 }

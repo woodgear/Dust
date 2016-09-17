@@ -1,5 +1,6 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.JavaLoader;
 import com.sun.istack.internal.Nullable;
 import jdk.nashorn.internal.objects.annotations.Where;
 
@@ -34,6 +35,11 @@ public class NestEnv implements Environment {
 
     @Override
     public Object get(int nest, int index) {
+        return null;
+    }
+
+    @Override
+    public JavaLoader javaLoader() {
         return null;
     }
 

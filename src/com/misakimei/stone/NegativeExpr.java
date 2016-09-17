@@ -43,4 +43,9 @@ public class NegativeExpr extends ASTList {
         t.assertSubtypeOf(TypeInfo.INT,tenv,this);
         return TypeInfo.INT;
     }
+
+    @Override
+    public String translate(TypeInfo res) {
+        return "-"+operand().translate(null);
+    }
 }

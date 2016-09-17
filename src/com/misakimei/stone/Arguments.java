@@ -1,17 +1,17 @@
 package com.misakimei.stone;
 
 import com.misakimei.stone.tool.Log;
-import com.misakimei.stone.type.TypeEnv;
-import com.misakimei.stone.type.TypeException;
-import com.misakimei.stone.type.TypeInfo;
-import com.misakimei.stone.type.TypeTag;
+import com.misakimei.stone.type.*;
 import com.misakimei.stone.vm.Code;
 import com.misakimei.stone.vm.EnvEx;
 import com.misakimei.stone.vm.StoneVM;
 import com.misakimei.stone.vm.VMFunction;
+import com.sun.org.apache.xerces.internal.impl.dv.dtd.ENTITYDatatypeValidator;
 
 import java.util.List;
 
+import static com.misakimei.stone.type.ToJava.ENV;
+import static com.misakimei.stone.type.ToJava.transloateExpr;
 import static com.misakimei.stone.vm.Opcode.*;
 
 /**
@@ -28,34 +28,17 @@ public class Arguments extends Postfix{
     public int size(){return numChildren();}
 
     public Object eval(Environment env,Object val) {
-        //如果函数是原生函数的话 交给NativeFunction 执行
-        if (val instanceof NativeFunction){
-            NativeFunction fun= (NativeFunction) val;
-            int numparam=fun.numParams();
-            if (size()!=numparam){
-                throw new StoneExcetion("函数参数不够 ",this);
-            }
-
-            Object[]arg=new Object[numparam];
-            int num=0;
-            for (ASTree a:this){
-                arg[num++]=a.eval(env);
-            }
-            return fun.invoke(arg,this);
+        if (!(val instanceof JavaFunction)){
+            throw new StoneExcetion("无法解析成函数类型");
         }
-
-
-        if (!(val instanceof Function)){throw new StoneExcetion("无法使用此函数 ");}
-
-        Function func= (Function) val;
-        ParamterList params=func.getParamters();
-        if (size()!=params.size()){throw new StoneExcetion("函数的参数无法匹配");}
-        Environment newenv=func.makeEnv();
-        int num=0;
+        JavaFunction function= (JavaFunction) val;
+        Object[]args=new Object[numChildren()+1];
+        args[0]=env;
+        int num=1;
         for (ASTree a:this){
-            params.eval(newenv,num++,a.eval(env));
+            args[num++]=a.eval(env);
         }
-        return func.getBody().eval(newenv);
+        return function.invoke(args);
     }
 
     @Override
@@ -76,5 +59,16 @@ public class Arguments extends Postfix{
         }
         return funcitonType.returntype;
     }
+
+    @Override
+    public String translate(String expr) {
+        StringBuilder code=new StringBuilder(expr);
+        code.append("(").append(ENV);
+        for (int i=0;i<size();i++){
+            code.append(",").append(transloateExpr(child(i),argTypes[i],funcitonType.parameterTypes[i]));
+        }
+        return code.append(")").toString();
+    }
+
 
 }

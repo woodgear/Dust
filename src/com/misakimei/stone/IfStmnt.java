@@ -9,6 +9,7 @@ import com.sun.org.apache.bcel.internal.generic.GOTO;
 
 import java.util.List;
 
+import static com.misakimei.stone.type.ToJava.returnZero;
 import static com.misakimei.stone.vm.Opcode.*;
 
 /**
@@ -68,16 +69,34 @@ public class IfStmnt extends ASTList {
 
     @Override
     public TypeInfo typecheck(TypeEnv tenv) throws TypeException {
-        TypeInfo condtype=condition().typecheck(tenv);
-        condtype.assertSubtypeOf(TypeInfo.INT,tenv,this);
-        TypeInfo thenType=thenBlock().typecheck(tenv);
+        TypeInfo condtype = condition().typecheck(tenv);
+        condtype.assertSubtypeOf(TypeInfo.INT, tenv, this);
+        TypeInfo thenType = thenBlock().typecheck(tenv);
         TypeInfo elseType;
-        ASTree elsebl=elseBlock();
-        if (elsebl==null){
-            elseType=TypeInfo.INT;
-        }else {
-            elseType=elsebl.typecheck(tenv);
+        ASTree elsebl = elseBlock();
+        if (elsebl == null) {
+            elseType = TypeInfo.INT;
+        } else {
+            elseType = elsebl.typecheck(tenv);
         }
-        return thenType.union(elseType,tenv);
+        return thenType.union(elseType, tenv);
+    }
+
+    @Override
+    public String translate(TypeInfo res) {
+        StringBuilder code = new StringBuilder();
+        code.append("if(");
+        code.append(condition().translate(null));
+        code.append("!=0){\n");
+        code.append(thenBlock().translate(res));
+        code.append("}else{\n");
+        ASTree elsebl = elseBlock();
+        if (elsebl != null) {
+            code.append(elsebl.translate(res));
+        } else if (res != null) {
+            code.append(returnZero(res));
+        }
+        return code.append("}\n").toString();
+
     }
 }

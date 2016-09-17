@@ -24,5 +24,6 @@ public abstract class ASTree implements Iterable<ASTree>{
     public TypeInfo typecheck(TypeEnv tenv)throws TypeException {
         return null;
     }
+    public String translate(TypeInfo res){return "";}
 
 }

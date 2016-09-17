@@ -1,5 +1,7 @@
 package com.misakimei.stone;
 
+import com.misakimei.stone.type.JavaLoader;
+
 import java.util.HashMap;
 
 /**
@@ -53,6 +55,11 @@ public class BasicEnv implements Environment {
 
     @Override
     public Object get(int nest, int index) {
+        return null;
+    }
+
+    @Override
+    public JavaLoader javaLoader() {
         return null;
     }
 }
