@@ -2,14 +2,52 @@ package com.misakimei.stone.type;
 
 import com.misakimei.stone.StoneExcetion;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by 18754 on 2016/9/12.
  */
 public class TypeEnv {
+
     protected TypeEnv outer;
     protected TypeInfo[]types;
+
+    public void addEquation(TypeInfo.UnknownType t1, TypeInfo t2) {
+        if (t2.isUnknowType()){
+            if (t2.toUnknowType().resloved()){
+                t2=t2.type();
+            }
+        }
+        Equation eq=find(t1);
+        if (t2.isUnknowType()){
+            eq.add(t2.toUnknowType());
+        }else {
+            for (TypeInfo.UnknownType t:eq){
+                t.setType(t2);
+            }
+            equations.remove(eq);
+        }
+    }
+
+    private Equation find(TypeInfo.UnknownType t) {
+        for (Equation e:equations){
+            if (e.contains(t)){
+                return e;
+            }
+        }
+        Equation e=new Equation();
+        e.add(t);
+        equations.add(e);
+        return e;
+    }
+
+    public static class Equation extends ArrayList<TypeInfo.UnknownType>{}
+    protected List<Equation>equations=new LinkedList<>();
+
+
     public TypeEnv(){
         this(8,null);
     }

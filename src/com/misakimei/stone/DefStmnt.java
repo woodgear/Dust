@@ -92,6 +92,22 @@ public class DefStmnt extends ASTList {
         }
         TypeInfo bodyType=body().typecheck(bodyenv);
         bodyType.assertSubtypeOf(retType,tenv,this);
-        return functype;
+
+        TypeInfo.FuncitonType func=functype.toFuncitonType();
+        for (TypeInfo t:func.parameterTypes){
+            fixUnknown(t);
+        }
+        fixUnknown(func.returntype);
+        return func;
+
+    }
+
+    private void fixUnknown(TypeInfo t) {
+        if (t.isUnknowType()){
+            TypeInfo.UnknownType ut=t.toUnknowType();
+            if (!ut.resloved()){
+                ut.setType(TypeInfo.ANY);
+            }
+        }
     }
 }
