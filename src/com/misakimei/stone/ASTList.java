@@ -63,4 +63,11 @@ public class ASTList extends ASTree {
             t.lookup(symbol);
         }
     }
+
+    @Override
+    public void compiler(Code c) {
+        for (ASTree t:this){
+            t.compiler(c);
+        }
+    }
 }
