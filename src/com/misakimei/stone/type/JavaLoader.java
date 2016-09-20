@@ -22,6 +22,7 @@ public class JavaLoader {
     public Class<?>load(String className,String method){
         CtClass cc=cpool.makeClass(className);
         try {
+            Log.d(method);
             cc.addMethod(CtMethod.make(method,cc));
             return cc.toClass(loader,null);
         } catch (CannotCompileException e) {
