@@ -64,10 +64,4 @@ public class ASTList extends ASTree {
         }
     }
 
-    @Override
-    public void compiler(Code c) {
-        for (ASTree t:this){
-            t.compiler(c);
-        }
-    }
 }
